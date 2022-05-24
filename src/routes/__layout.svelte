@@ -11,7 +11,3 @@
 <footer>
   Footer
 </footer>
-
-<style lang="scss">
-  /* @import "../css/app.scss"; */
-</style>
