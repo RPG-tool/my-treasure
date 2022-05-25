@@ -1,4 +1,4 @@
-import { writable, readable, derived, get } from 'svelte/store'; // set
+import { writable, derived, get } from 'svelte/store'; // set
 import { getRandomItems } from './item-manager';
 
 /* Items data */
@@ -252,7 +252,7 @@ const getCellIdsInRow = (row) => {
 }
 
 
-export const updateRowStatus = (row, cell_id) => {
+export const updateRowStatus = (row) => { // cell_id
   let c = get(config);
   const row_cell_ids = getCellIdsInRow(row);
   let result = true;
@@ -452,7 +452,7 @@ function populateLastBranches() {
 
 function populateRestWeapons() {
   let clog = get(catalog);
-  let w = clog['weapon'];
+  // let w = clog['weapon'];
   let w_cats = clog['weapon_category'];
   let not_last_cats = getWeaponCatNodesNotLast(w_cats);
 
@@ -541,7 +541,7 @@ function normalizeWeaponProb(weapons) {
 
 function createWeaponTree(cat) {
   let clog = get(catalog);
-  let w = clog['weapon'];
+  // let w = clog['weapon'];
   let w_cats = clog['weapon_category'];
 
   // console.log(cat);
@@ -564,7 +564,7 @@ function getWeaponsInBranch(tree, prob = 1.0, result = []) {
     let clog = get(catalog);
     let w = JSON.parse(JSON.stringify(clog[tree.name]));
 
-    w = w.map((item) => {
+    w.map((item) => {
       item.prob *= level_prop;
       result.push(item);
       // return item;
@@ -583,18 +583,19 @@ function getWeaponsInBranch(tree, prob = 1.0, result = []) {
 /* NOT USED NOT USED NOT USED NOT USED NOT USED NOT USED */
 /* NOT USED NOT USED NOT USED NOT USED NOT USED NOT USED */
 
-function getAllWeaponCatNodes(tree, key, result = []) {
-  if (typeof tree.children === 'undefined') {
-    result.push(tree[key]);
-    return result;
-  } else {
-    result.push(tree[key]);
-    for ( let i = 0; i < tree.children.length; i++) {
-      getAllWeaponCatNodes(tree.children[i], key, result);
-    }
-  }
-  return result;
-}
+// function getAllWeaponCatNodes(tree, key, result = []) {
+//   if (typeof tree.children === 'undefined') {
+//     result.push(tree[key]);
+//     return result;
+//   } else {
+//     result.push(tree[key]);
+//     for ( let i = 0; i < tree.children.length; i++) {
+//       getAllWeaponCatNodes(tree.children[i], key, result);
+//     }
+//   }
+//   return result;
+// }
+
 // let clog = get(catalog);
 // let all_cats = getAllWeaponCatNodes(clog['weapon_category'], 'name');
 // console.log('getAllWeaponCatNodes()', all_cats);
