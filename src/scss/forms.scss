@@ -1,0 +1,134 @@
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	padding: 8px;
+	border: 1px solid $c-border-form;
+	border-radius: $border-radius;
+}
+
+input, select, textarea {
+	box-shadow: inset 0 0 8px rgba(0,0,0,0.15);
+}
+
+select {
+	padding-right: 8px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button,
+.button {
+	height: 42px;
+	padding: 0 16px;
+	outline: none;
+
+	font-size: 20px;
+	font-weight: 500;
+	color: $c-blue;
+
+	border: 2px solid $c-blue;
+	background-color: transparent;
+	border-bottom-width: 4px;
+
+	cursor: pointer;
+
+	transition: all 0.15s ease-in-out;
+
+	&:hover {
+		border-color: darken($c-blue, 10%);
+		color: darken($c-blue, 10%);
+	}
+
+	&:disabled {
+		opacity: 0.4;
+		cursor: not-allowed;
+	}
+
+	&:not(:disabled):active {
+		background-color: #fff;
+	}
+
+	&:focus {
+		border-color: darken($c-blue-dark, 10%);
+		color: darken($c-blue-dark, 10%);
+	}
+
+	&.danger {
+		border-color: $c-red-dark;
+		color: $c-red-dark;
+	}
+}
+
+textarea {
+	width: 100%;
+	height: 250px;
+	font-family: Hack, monospace;
+  font-size: 12px;
+}
+
+$switch-w: 24px;
+$switch-h: 12px;
+
+label.switch {
+	position: absolute;
+	top: 8px;
+	left: 7px;
+
+	display: block;
+	width: $switch-w;
+	height: #{$switch-h + 2};
+
+	border: 1px solid $c-border-table;
+	background: $c-border-table;
+	border-radius: $switch-w;
+
+	background: $c-blue;
+	transition: all 0.15s ease-in-out;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 1px;
+		left: 1px;
+
+		display: block;
+		width: #{$switch-h - 2};
+		height: #{$switch-h - 2};
+
+		background: #fff;
+		border-radius: 100%;
+		transition: all 0.15s ease-in-out;
+	}
+}
+
+.is-disabled {
+	label.switch{
+		background-color: transparent;
+		&:after {
+			left: calc(100% - 1px);
+			transform: translateX(-100%);
+			background-color: $c-border-table;
+		}
+	}
+}
+
+label#cursed-config {
+	padding-bottom: 12px;
+	padding-left: 8px;
+	cursor: pointer;
+}
+
+input[type=checkbox] {
+	width: 12px;
+	height: 12px;
+	margin-right: 4px;
+}
+// label:active:after {
+// 	width: 48px;
+// }

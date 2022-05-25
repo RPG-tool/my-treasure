@@ -1,0 +1,39 @@
+.tooltip,
+[data-tooltip] {
+  position: absolute;
+  width: 280px;
+  padding: 16px;
+  border-radius: $border-radius;
+
+  background-color: #333;
+  color: #fff;
+
+  // &:after {
+  //   content: '';
+
+  //   position: absolute;
+  //   bottom: 100%;
+  //   left: 50%;
+  //   width: 0;
+
+  //   border-top: 8px solid #000;
+  //   border-top: 8px solid hsla(0, 0%, 20%, 0.9);
+  //   border-right: 8px solid transparent;
+  //   border-left: 8px solid transparent;
+
+  //   font-size: 0;
+  //   line-height: 0;
+  // }
+}
+
+// [data-tooltip]:hover:before,
+// [data-tooltip]:hover:after {
+//   visibility: visible;
+//   opacity: 1;
+// 	transform: translate(-50%, 0)
+// }
+// [data-tooltip=false]:hover:before,
+// [data-tooltip=false]:hover:after {
+//   visibility: hidden;
+//   opacity: 0;
+// }

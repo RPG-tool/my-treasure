@@ -1,0 +1,178 @@
+//
+// Mixins / functins / utils
+//
+
+@mixin only_desktop {
+  @media only screen and (min-width: $small-desktop) {
+    @content;
+  }
+}
+
+@mixin ie() {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+// html {
+//   /* Just add your arguments */
+//   @include fluid-typography(16,25,375,1440);
+//   @include fluid-typography(1,1.5,375,1440,'line-height','');
+// }
+
+@mixin fluid-typography($minFontVal, $maxFontVal,$minBreakpointPx, $maxBreakpointPx, $fontProp: 'font-size', $fontUnit: 'px') {
+
+  /* Define variable for media query */
+  $maxLessOne: $maxBreakpointPx - 1;
+
+  /* Define variable for fallback */
+  $avg: ($maxFontVal + $minFontVal) / 2;
+
+  /* Base font size */
+  #{$fontProp}: #{$minFontVal}#{$fontUnit};
+
+  @media (min-width: #{$minBreakpointPx}px) and (max-width: #{$maxLessOne}px) {
+
+    /* Adds a fallback for unsupported browsers */
+    #{$fontProp}: #{$avg}#{$fontUnit};
+
+    /* The fluid typography magic 🌟  */
+    #{$fontProp}: calc(#{$minFontVal}#{$fontUnit} + (#{$maxFontVal} - #{$minFontVal}) * (100vw - #{$minBreakpointPx}px) / (#{$maxBreakpointPx} - #{$minBreakpointPx}))
+  }
+
+  @media (min-width: #{$maxBreakpointPx}px) {
+    #{$fontProp}: #{$maxFontVal}#{$fontUnit};
+  }
+}
+
+// @include clearfix()
+@mixin clearfix {
+  &:after {
+    content:"";
+    display: table;
+    clear: both;
+  }
+}
+
+// @extend %clearfix
+%clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+.clearfix:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+
+@function flex-grid($columns, $container-columns: $fg-max-columns, $gutter-width: $fg-gutter) {
+  @return calc((100% - #{($container-columns - 1) * $gutter-width}) / #{$container-columns} * #{$columns} + #{($columns - 1) * $gutter-width});
+}
+
+// Define your breakpoints
+// $mobile: 767px;
+// $tablet: 1024px;
+// $small-desktop: 1264px;
+
+@mixin media($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.p-0000 {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.m-0 {
+  left: 0;
+}
+
+$space_names:     (0, 4, 8, 12, 16, 24, 32, 48, 64, 96, 128);
+$space_sizes_des: (0, 4, 8, 12, 16, 24, 32, 48, 64, 96, 128);
+$space_sizes_tab: (0, 4, 8, 12, 16, 24, 32, 48, 64, 96, 128);
+$space_sizes_mob: (0, 4, 4, 8, 8, 12, 16, 24, 32, 48, 64);
+$space_sides: (top, bottom, left, right); // Leave this variable alone
+
+@for $i from 1 through length($space_names) {
+  @each $side in $space_sides {
+    .m#{str-slice($side, 0, 1)}-#{nth($space_names, $i)} {
+      margin-#{$side}: #{nth($space_sizes_des, $i)}px;
+    }
+    .m#{str-slice($side, 0, 1)}--#{nth($space_names, $i)} {
+      margin-#{$side}: -#{nth($space_sizes_des, $i)}px;
+    }
+    .p#{str-slice($side, 0, 1)}-#{nth($space_names, $i)} {
+      padding-#{$side}: #{nth($space_sizes_des, $i)}px;
+    }
+  }
+}
+
+//
+// Tablet
+//
+@include media($tablet) {
+  @for $i from 1 through length($space_names) {
+    @each $side in $space_sides {
+      .m#{str-slice($side, 0, 1)}-#{nth($space_names, $i)} {
+        margin-#{$side}: #{nth($space_sizes_tab, $i)}px;
+      }
+      .m#{str-slice($side, 0, 1)}--#{nth($space_names, $i)} {
+        margin-#{$side}: -#{nth($space_sizes_tab, $i)}px;
+      }
+      .p#{str-slice($side, 0, 1)}-#{nth($space_names, $i)} {
+        padding-#{$side}: #{nth($space_sizes_tab, $i)}px;
+      }
+
+      .m#{str-slice($side, 0, 1)}-#{nth($space_names, $i)}-tab {
+        margin-#{$side}: #{nth($space_sizes_tab, $i)}px;
+      }
+      .m#{str-slice($side, 0, 1)}--#{nth($space_names, $i)}-tab {
+        margin-#{$side}: -#{nth($space_sizes_tab, $i)}px;
+      }
+      .p#{str-slice($side, 0, 1)}-#{nth($space_names, $i)}-tab {
+        padding-#{$side}: #{nth($space_sizes_tab, $i)}px;
+      }
+    }
+  }
+}
+
+//
+// Mobile
+//
+@include media($mobile) {
+  @for $i from 1 through length($space_names) {
+    @each $side in $space_sides {
+      .m#{str-slice($side, 0, 1)}-#{nth($space_names, $i)} {
+        margin-#{$side}: #{nth($space_sizes_mob, $i)}px;
+      }
+      .m#{str-slice($side, 0, 1)}--#{nth($space_names, $i)} {
+        margin-#{$side}: -#{nth($space_sizes_mob, $i)}px;
+      }
+      .p#{str-slice($side, 0, 1)}-#{nth($space_names, $i)} {
+        padding-#{$side}: #{nth($space_sizes_mob, $i)}px;
+      }
+
+      .m#{str-slice($side, 0, 1)}-#{nth($space_names, $i)}-mob {
+        margin-#{$side}: #{nth($space_sizes_mob, $i)}px;
+      }
+      .m#{str-slice($side, 0, 1)}--#{nth($space_names, $i)}-mob {
+        margin-#{$side}: -#{nth($space_sizes_mob, $i)}px;
+      }
+      .p#{str-slice($side, 0, 1)}-#{nth($space_names, $i)}-mob {
+        padding-#{$side}: #{nth($space_sizes_mob, $i)}px;
+      }
+    }
+  }
+}
