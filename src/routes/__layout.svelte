@@ -1,5 +1,5 @@
 <script>
-  import '../css/app.scss';
+  import '../scss/app.scss';
 </script>
 
 <header>
