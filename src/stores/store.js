@@ -1,4 +1,4 @@
-import { writable, readable, derived, get, set } from 'svelte/store';
+import { writable, readable, derived, get } from 'svelte/store'; // set
 import { getRandomItems } from './item-manager';
 
 /* Items data */

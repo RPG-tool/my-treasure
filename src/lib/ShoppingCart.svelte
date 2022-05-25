@@ -1,6 +1,6 @@
 <script>
 	import {shopping_cart, config, updateXpSum} from '../stores/store';
-  import { tooltip } from './js/tooltip';
+  // import { tooltip } from './js/tooltip';
 	// export let data;
 	// export let idx;
 
