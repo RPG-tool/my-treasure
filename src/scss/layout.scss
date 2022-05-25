@@ -145,7 +145,7 @@ fieldset {
 	overflow-x: hidden;
 	overflow-y: auto;
 
-	background: transparent url(img/gollum-bg.png) right bottom no-repeat;
+	background: transparent url(/gollum-bg.png) right bottom no-repeat;
 	background-size: 92% auto;
 }
 
@@ -443,7 +443,7 @@ table.shopping-cart {
 		height: 44px;
 		padding: 0;
 		border: 0;
-		background: transparent url(img/delete-left.svg) center center no-repeat;
+		background: transparent url(/delete-left.svg) center center no-repeat;
 		background-size: auto 24px;
 		cursor: pointer;
 	}
@@ -454,7 +454,7 @@ table.shopping-cart {
 		height: 48px;
 		padding: 0;
 		border: 0;
-		background: transparent url(img/message-lines.svg) center center no-repeat;
+		background: transparent url(/message-lines.svg) center center no-repeat;
 		background-size: auto 22px;
 		cursor: pointer;
 	}
