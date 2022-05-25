@@ -11,3 +11,10 @@
 <footer>
   Footer
 </footer>
+
+<style type="scss">
+  $my-var: #ee0000;
+  footer {
+    background-color: $my-var;
+  }
+</style>
