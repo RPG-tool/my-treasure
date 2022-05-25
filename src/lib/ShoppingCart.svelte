@@ -1,6 +1,7 @@
 <script>
 	import {shopping_cart, config, updateXpSum} from '../stores/store';
-  // import { tooltip } from './js/tooltip';
+  import { tooltip } from '../js/tooltip';
+
 	// export let data;
 	// export let idx;
 
@@ -13,7 +14,6 @@
     $shopping_cart = $shopping_cart.filter((item, index) => index !== idx);
     updateXpSum();
   }
-
 </script>
 
 
