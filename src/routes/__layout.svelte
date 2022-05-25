@@ -3,15 +3,15 @@
   import '../scss/app.scss';
 </script>
 
-<header>
-  Header
-</header>
+<!-- <header>
+  Test header
+</header> -->
 
 <slot></slot>
 
-<footer>
-  Footer
-</footer>
+<!-- <footer>
+  test footer
+</footer> -->
 
 <style type="scss">
   $my-var: #ee0000;
