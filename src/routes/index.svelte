@@ -1,9 +1,8 @@
 <script>
   // import init from "../js/init.js";
-  import {config, catalog, shopping_cart, matrix, enableDisableRowCells, enableAllCells, pickRandomItem, rowClicked} from '../stores/store';
-  import {getRandomItemFromCategory} from '../stores/item-manager';
-  import { tooltip } from '../js/tooltip';
-	import Cell from '$lib/Cell.svelte';
+  import {config, catalog, shopping_cart, matrix, enableDisableRowCells, enableAllCells, pickRandomItem, rowClicked} from '$stores/store';
+  import {getRandomItemFromCategory} from '$stores/item-manager';
+  import Cell from '$lib/Cell.svelte';
 	import ShoppingCart from '$lib/ShoppingCart.svelte';
 	import XpSum from '$lib/XpSum.svelte';
 	import {onMount, onDestroy} from 'svelte';
