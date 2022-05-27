@@ -38,7 +38,7 @@
 				}), {})
 			console.table(results_sorted);
 		} else {
-			console.log('Plese select category');
+			console.log('Please select category');
 		}
 	}
 
