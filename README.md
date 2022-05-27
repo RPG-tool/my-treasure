@@ -10,6 +10,10 @@ Some of its main features:
 - Lots of categories (common items, gold & jewels, magic items...)
 - Weighted probability (in most of the categories)
 
+You can try-it online at:  
+<https://my-treasure.vercel.app/>
+
+
 ## Help and how to use
 
 - Click on «Pick randon item» button to get a random cell of the table

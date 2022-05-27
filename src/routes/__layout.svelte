@@ -9,14 +9,16 @@
 
 <slot></slot>
 
-<footer class="mt-8">
-  My treasure, RPG Treasure / loot generator by Carlos Cabo (@putuko). v.01
+<footer class="mt-16">
+  <p>
+    My treasure, RPG Treasure / loot generator by Carlos Cabo (<a href="https://twitter.com/putuko">@putuko</a>). v.01. <a href="https://github.com/RPG-tool/my-treasure">Source code @ GitHub</a>
+  </p>
 </footer>
 
 <style type="scss">
   footer {
     font-size: 16px;
-    color: #34495e;
+    color: #333;
   }
   // $my-var: #ee0000;
   // footer {
