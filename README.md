@@ -1,5 +1,7 @@
 # My treasure RPG / OSR treasure / loot generator
 
+<img src="https://raw.githubusercontent.com/RPG-tool/my-treasure/master/repository-open-graph.png">
+
 Tired of endless treasure tables that occupy dozens of pages in the DM manual, difficult to handle, not very random and difficult to balance? Tired of stopping the flow of your RPG play to reward your group with some treasure?
 
 I present to you **«My treasure, RPG treasure / loot generator».**
