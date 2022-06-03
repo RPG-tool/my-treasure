@@ -1,6 +1,6 @@
 # My treasure RPG / OSR treasure / loot generator
 
-<a href="https://my-treasure.vercel.app/" target="_blank"><img src="https://raw.githubusercontent.com/RPG-tool/my-treasure/master/repository-open-graph.png"></a>
+<a href="https://my-treasure.netlify.app/" target="_blank"><img src="https://raw.githubusercontent.com/RPG-tool/my-treasure/master/repository-open-graph.png"></a>
 
 Tired of endless treasure tables that occupy dozens of pages in the DM manual, difficult to handle, not very random and difficult to balance? Tired of stopping the flow of your RPG play to reward your group with some treasure?
 
@@ -13,7 +13,7 @@ Some of its main features:
 - Weighted probability (in most of the categories)
 
 You can try-it online at:  
-<a href="https://my-treasure.vercel.app/" target="_blank">https://my-treasure.vercel.app/</a>
+<a href="https://my-treasure.netlify.app/" target="_blank">https://my-treasure.netlify.app/</a>
 
 
 ## Help and how to use
