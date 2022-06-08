@@ -1,5 +1,5 @@
 <script>
-  // import init from "../js/init.js";
+  import init from "../js/init.js";
   import {config, catalog, shopping_cart, matrix, enableDisableRowCells, enableAllCells, pickRandomItem, rowClicked} from '$stores/store';
   import {getRandomItemFromCategory} from '$stores/item-manager';
   import Cell from '$lib/Cell.svelte';
