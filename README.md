@@ -1,4 +1,4 @@
-# My treasure RPG / OSR treasure / loot generator ![version](https://img.shields.io/badge/version-X.X.3-blue)
+# My treasure RPG / OSR treasure / loot generator ![version](https://img.shields.io/badge/version-v0.1--alpha-blue)
 
 <a href="https://my-treasure.netlify.app/" target="_blank"><img src="https://raw.githubusercontent.com/RPG-tool/my-treasure/master/repository-open-graph.png"></a>
 
