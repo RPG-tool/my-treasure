@@ -11,7 +11,7 @@
 
 <footer class="mt-16">
   <p>
-    My treasure, RPG Treasure / loot generator by Carlos Cabo (<a href="https://twitter.com/putuko">@putuko</a>). v.01. <a href="https://github.com/RPG-tool/my-treasure">Source code @ GitHub</a>
+    My treasure, RPG Treasure / loot generator by Carlos Cabo (<a href="https://twitter.com/putuko">@putuko</a>). <span id="version-txt">v01-alpha</span>. <a href="https://github.com/RPG-tool/my-treasure">Source code @ GitHub</a>
   </p>
 </footer>
 
